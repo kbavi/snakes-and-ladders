@@ -1,0 +1,27 @@
+{
+  "name": "snakes-and-ladders",
+  "version": "1.0.0",
+  "description": "Implementation of Snakes and Ladders Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avinashb98/snakes-and-ladders.git"
+  },
+  "keywords": [
+    "game"
+  ],
+  "author": "Avinash Bhardwaj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/avinashb98/snakes-and-ladders/issues"
+  },
+  "homepage": "https://github.com/avinashb98/snakes-and-ladders#readme",
+  "devDependencies": {
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  }
+}
