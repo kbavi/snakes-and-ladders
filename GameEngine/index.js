@@ -1,4 +1,4 @@
-const Board = require('../GameBoard');
+const Board = require('./GameBoard');
 
 class SnakesAndLadders {
   constructor(params) {

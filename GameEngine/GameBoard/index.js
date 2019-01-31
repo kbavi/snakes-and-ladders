@@ -1,4 +1,4 @@
-const Graph = require('../utils/graph');
+const Graph = require('./utils/graph');
 
 class GameBoard {
   constructor(params) {
