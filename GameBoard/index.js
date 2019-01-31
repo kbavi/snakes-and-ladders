@@ -1,12 +1,12 @@
 const Graph = require('../utils/graph');
 
 class GameBoard {
-  constructor(size) {
-    this.size = size;
+  constructor(params) {
+    this.size = params.size;
     this.Board = new Graph();
     this.addCells();
-    this.addSnakes();
-    this.addLadders();
+    this.addSnakes(params.snakes);
+    this.addLadders(params.ladders);
     this.addSteps();
   }
 
@@ -16,32 +16,13 @@ class GameBoard {
     }
   }
 
-  addSnakes() {
-    const snakes = [
-      [17, 7],
-      [54, 34],
-      [62, 18],
-      [64, 60],
-      [87, 24],
-      [93, 73],
-      [95, 75],
-      [99, 78]
-    ];
+  addSnakes(snakes) {
     snakes.forEach((snake) => {
       this.Board.addDirectedEdge(snake[0], snake[1], -1);
     });
   }
 
-  addLadders() {
-    const ladders = [
-      [4, 14],
-      [9, 31],
-      [20, 38],
-      [28, 84],
-      [40, 59],
-      [63, 81],
-      [71, 91]
-    ];
+  addLadders(ladders) {
     ladders.forEach((ladder) => {
       this.Board.addDirectedEdge(ladder[0], ladder[1], -1);
     });
