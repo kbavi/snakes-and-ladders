@@ -1,4 +1,5 @@
 const GameEngine = require('./GameEngine');
+
 const {
   snakes, ladders, playersCount, playerMoves
 } = require('./sampleInputs');
