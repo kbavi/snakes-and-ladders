@@ -4,7 +4,7 @@ const {
 } = require('./sampleInputs');
 
 const game = new GameEngine({
-  size: 100, ladders, snakes, playersCount
+  ladders, snakes, playersCount
 });
 
 game.play(playerMoves);

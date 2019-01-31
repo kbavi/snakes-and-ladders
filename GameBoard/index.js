@@ -2,7 +2,7 @@ const Graph = require('../utils/graph');
 
 class GameBoard {
   constructor(params) {
-    this.size = params.size;
+    this.size = params.size || 100;
     this.Board = new Graph();
     this.addCells();
     this.addSnakes(params.snakes);
