@@ -46,6 +46,12 @@ class SnakesAndLadders {
       });
     });
   }
+
+  reset() {
+    Object.keys(this.players).forEach((player) => {
+      this.players[player].currentCell = 0;
+    });
+  }
 }
 
 module.exports = SnakesAndLadders;
