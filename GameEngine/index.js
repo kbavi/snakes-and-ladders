@@ -21,10 +21,14 @@ class SnakesAndLadders {
 
   movePlayer(player, steps) {
     const newCell = this.players[player].currentCell + steps;
+
     if (newCell > this.GameBoard.size) {
+      // Player must not move beyond the limit of board
       return;
     }
+
     if (this.GameBoard.Board.edges[newCell][0].weight === -1) {
+      // If the newCell has a snake/ladder, move to where it leads
       this.players[player].currentCell = this.GameBoard.Board.edges[newCell][0].node;
     } else {
       this.players[player].currentCell = newCell;
@@ -48,6 +52,7 @@ class SnakesAndLadders {
   }
 
   reset() {
+    // Restore initial positions of the players
     Object.keys(this.players).forEach((player) => {
       this.players[player].currentCell = 0;
     });

@@ -29,10 +29,12 @@ class GameBoard {
   }
 
   addSteps() {
-    for (let i = 1; i <= this.size; i += 1) {
-      for (let k = 1; k <= 6; k += 1) {
-        if ((i + k) <= this.size && !this.hasLadderOrSnake(i)) {
-          this.Board.addDirectedEdge(i, i + k, k);
+    for (let currentCell = 1; currentCell <= this.size; currentCell += 1) {
+      for (let step = 1; step <= 6; step += 1) {
+        const newCell = currentCell + step;
+        const newCellInLimits = (newCell <= this.size);
+        if (newCellInLimits && !this.hasLadderOrSnake(currentCell)) {
+          this.Board.addDirectedEdge(currentCell, newCell, step);
         }
       }
     }
