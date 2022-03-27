@@ -1,8 +1,8 @@
 # Snakes and Ladders
 
-Welcome to the JavaScript implementation of Snakes and Ladders.
+Welcome to the JavaScript implementation of the [Snakes and Ladders](https://en.wikipedia.org/wiki/Snakes_and_ladders) board game.
 
-**Concept**
+**Design**
 -  A directed graph is used to represent the game board.
 - The board has (by default) 100 cells (10 X 10).
 - Each cell in the board is linked to the next 6 cells (if they exist).
